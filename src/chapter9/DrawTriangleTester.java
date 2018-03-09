@@ -20,7 +20,7 @@ public class DrawTriangleTester extends DrawTriangle {
 
         DrawTriangle mouseCoordinate = new DrawTriangle();
         for(int i = 0; i < 3; i++) {
-            mouseCoordinate.mouseClicked();
+
         }
     }
 }
