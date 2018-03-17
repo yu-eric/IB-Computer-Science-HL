@@ -10,7 +10,7 @@ public class DrawTriangleTester extends DrawTriangle {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> coordinateStorage = new ArrayList<Integer>();
+
 
         JFrame frame = new JFrame();
         frame.setSize(500, 500);
@@ -18,9 +18,9 @@ public class DrawTriangleTester extends DrawTriangle {
         frame.setTitle("Draw your own triangle!");
         frame.setVisible(true);
 
-        DrawTriangle mouseCoordinate = new DrawTriangle();
+        DrawTriangle mousePos = new DrawTriangle();
         for(int i = 0; i < 3; i++) {
-            mouseCoordinate.mouseClicked();
+
         }
     }
 }
