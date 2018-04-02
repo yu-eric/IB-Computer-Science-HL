@@ -7,7 +7,15 @@ public class NumberFormatterTester {
         DecimalSeparatorFormatter decimal = new DecimalSeparatorFormatter();
         AccountingFormatter accounting = new AccountingFormatter();
         DecimalSeparatorFormatter def = new DecimalSeparatorFormatter();
-        BaseFormatter base = new BaseFormatter(36);
+        int baseNum = 23;
+
+        if(baseNum >= 2 && baseNum <= 36) {
+            //baseNum stays the same
+        } else {
+            baseNum = 10;
+        }
+        BaseFormatter base = new BaseFormatter(baseNum);
+
 
         System.out.println(decimal.format(1234567));
         System.out.println(accounting.format(-123));
