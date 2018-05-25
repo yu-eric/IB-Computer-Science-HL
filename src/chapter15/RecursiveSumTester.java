@@ -1,10 +1,6 @@
 package chapter15;
 
-import java.util.Scanner;
 
-/**
- * Created by eyu9209 on 5/23/2018.
- */
 public class RecursiveSumTester {
 
     public static void main(String[] args) {
