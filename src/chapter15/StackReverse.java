@@ -15,7 +15,7 @@ public class StackReverse {
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter a sentence to reverse, ending with a period: ");
         String next = in.nextLine();
-        String[] sentence = next.split("\\.");
+        String[] sentence = next.split("\\. ");
         Stack<String> words = new Stack<>();
         String[] wordList = new String[] {};
         boolean space = true;
@@ -23,30 +23,26 @@ public class StackReverse {
         for(int i = 0; i < sentence.length; i++) {
             wordList = sentence[i].split(" ");
 
-            wordList[i] = wordList[i].toLowerCase();
-            wordList[0] += ". ";
-            if(i != 0) {
-                wordList[wordList.length - 1] += " ";
+            wordList[0] = wordList[0].toLowerCase();
+            wordList[0] += ".";
+            if(i == sentence.length - 1) {
+                wordList[sentence.length - 1] = wordList[sentence.length - 1].substring(0, wordList[sentence.length - 1].length() - 1);
+
             }
             for(int j = 0; j < wordList.length; j++) {
                 int theIndex = wordList.length - 1;
-                if(j == theIndex) {
 
+                if(!(wordList[j]).equals(". ")) {
+                    wordList[j] += " ";
+                }
+                if(j == theIndex) {
+                    // Capitalizes the first letter
                     wordList[theIndex] = wordList[theIndex].replace(wordList[theIndex].charAt(0), wordList[theIndex].toUpperCase().charAt(0));
                 }
                 words.push(wordList[j]);
 
-                while(space) {
-                    words.push(" ");
-                    space = false;
-                }
             }
-
         }
-
-
-
-
 
         while(!words.isEmpty()) {
             System.out.print(words.pop());
