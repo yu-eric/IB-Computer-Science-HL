@@ -1,10 +1,16 @@
 package chapter15;
 
 /**
- * Created by eyu9209 on 5/7/2018.
+ * This class tests recursively if a given string exists in another string
  */
 public class StringFind {
 
+    /**
+     * Finds a string in another larger string
+     * @param text text to be found
+     * @param str the larger string
+     * @return true if the string is found, false otherwise
+     */
     public boolean find(String text, String str) {
 
         if (text.length() < str.length()) {

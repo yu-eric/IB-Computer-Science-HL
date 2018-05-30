@@ -1,10 +1,16 @@
 package chapter15;
 
 /**
- * Created by eyu9209 on 5/23/2018.
+ * Simple sum program using a recursive method
  */
 public class RecursiveSum {
 
+    /**
+     * Sums an array recursively
+     * @param a the int[] array
+     * @param len the length of the array a
+     * @return the sum of the array
+     */
     public int sum(int[] a, int len) {
         if(len == 1) {
             return a[0];
