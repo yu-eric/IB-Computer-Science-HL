@@ -1,4 +1,4 @@
-package chapter15;
+package chapter14;
 
 /**
  * Simple sum program using a recursive method
